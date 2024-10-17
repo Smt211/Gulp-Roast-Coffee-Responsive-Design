@@ -1,0 +1,249 @@
+/* General Styles */
+* {
+    box-sizing: border-box;
+}
+
+body,
+html {
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Centered Top Logo */
+.top-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 120px;
+    background-color: #082B59;
+}
+
+.top-header .logo {
+    width: 200px;
+    padding-top: 20px;
+}
+
+/* General Navbar Styles */
+.navbar {
+    background-color: #082B59;
+    padding: 10px 0;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.navbar ul li {
+    margin: 0 20px;
+}
+
+.navbar ul li a {
+    color: #F2F2F2;
+    text-decoration: none;
+    font-family: "Playfair Display", sans-serif;
+    font-size: 1.2em;
+    padding: 10px;
+    display: inline-block;
+}
+
+#menu2 a {
+    color: #F2F2F2;
+    background-color: #D98555;
+    border-radius: 5px;
+}
+
+.navbar ul li a:hover {
+    background-color: #D98555;
+    color: white;
+    border-radius: 5px;
+}
+
+/* Main Content Section */
+.main-content {
+    position: relative;
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('https://assets.codepen.io/6306176/gulp-coffee-beans.jpg');
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+}
+
+.main-content h1 {
+    font-size: 4em;
+    color: #F2F2F2;
+    margin: 0;
+    font-family: "Lobster", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    padding-left: 20px;
+    padding-top: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
+}
+
+/* Transparent Text Overlay */
+.text-overlay {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 100%;
+}
+
+/* Coffee Item Styling */
+.coffee-item {
+    text-align: center;
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTS_iOQlg-ho3SWMCRrqpGs5F7tGPzqXW8zkFf7nYd-4ujjNVtg');
+    background-size: cover;
+    background-position: center;
+    padding: 15px;
+    border: 2px solid #59331D;
+    border-radius: 10px;
+    max-width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
+    transition: box-shadow 0.3s ease;
+}
+
+.coffee-item h2 {
+    font-size: 1.5em;
+    color: #59331D;
+    margin: 10px 0;
+}
+
+.coffee-item figcaption {
+    color: #59331D;
+}
+
+.coffee-item p {
+    color: #59331D;
+    margin-bottom: 10px;
+}
+
+/* Image and Caption */
+figure {
+    max-width: 300px;
+    text-align: center;
+}
+
+figure img {
+    width: 100%;
+    height: auto;
+    max-width: 250px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+}
+
+/* Footer */
+footer {
+    background-color: #131D26;
+    color: #F2F2F2;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+    flex-shrink: 0;
+}
+
+footer a {
+    color: #F2F2F2;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #D98555;
+}
+
+/* Media Queries for Grid-based layouts */
+
+/* Small Viewports */
+@media (max-width: 767px) {
+
+    .navbar ul {
+        flex-direction: row;
+    }
+
+    .text-overlay {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .coffee-item {
+        width: 100%;
+        padding: 15px;
+    }
+
+    figure img {
+        max-width: 100%;
+    }
+}
+
+/* Medium Viewports (Tablets) */
+@media (min-width: 768px) and (max-width: 1199px) {
+
+    .navbar ul {
+        flex-direction: row;
+    }
+
+    .text-overlay {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .coffee-item {
+        display: flex;
+        align-items: center;
+        text-align: left;
+        padding: 20px;
+    }
+
+    .coffee-item img {
+        max-width: 150px;
+    }
+}
+
+/* Large Viewports (Desktops) */
+@media (min-width: 1200px) {
+
+    .text-overlay {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+
+    .coffee-item {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    figure {
+        margin: 0 auto;
+    }
+}
